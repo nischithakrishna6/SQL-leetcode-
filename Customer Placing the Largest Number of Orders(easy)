@@ -1,5 +1,7 @@
 #Customer Placing the Largest Number of Orders
 # Write your MySQL query statement below
-Select customer_number
+select customer_number
 from orders
-where customer_number <> order_number
+group by customer_number
+order by count(*) desc
+limit 1
